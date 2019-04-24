@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-sm-center mt-3">
+        <div class="col col-sm-6">
+            <h1>[[ ${product.getName()} ]]</h1>
+
+            <div class="card">
+                <div class="card-body">
+                </div>
+                <ul class="list-group list-group-flush" data-th-if="${product instanceOf T(ru.itpark.ulmart.domain.IPhone)}">
+                    <a href="#"><img src="https://static.re-store.ru/upload/iblock/f77/x1-247-170-f7756c960a5fdfb62a7e318346f6db33.jpg"></a>
+                    <li class="list-group-item">Color: [[ ${product.getColor()} ]]</li>
+                    <li class="list-group-item">Model: [[ ${product.getModel()} ]]</li>
+                    <li class="list-group-item">Memory: [[ ${product.getMemorySize()} ]]</li>
+                    <li class="list-group-item">Price: [[ ${product.getPrice()} ]]</li>
+                </ul>
+                <ul class="list-group list-group-flush" data-th-if="${product instanceOf T(ru.itpark.ulmart.domain.TShirt)}">
+                    <a href="#"><img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQyk8aOXUKMOBWP6dARpPWcB6uQ9dOKDXnS2_W1zpGfmp4e9nuiIwLuzDMyoqgRBn25ITzRRxXLT-htEsvfCamC46NBSw0_8gHM43-JE3DJjAW8CSaXs3MA&usqp=CAc"></a>
+                    <li class="list-group-item">Color: [[ ${product.getColor()} ]]</li>
+                    <li class="list-group-item">Size: [[ ${product.getSize()} ]]</li>
+                    <li class="list-group-item">Price: [[ ${product.getPrice()} ]]</li>
+                </ul>
+                <ul class="list-group list-group-flush" data-th-if="${product instanceOf T(ru.itpark.ulmart.domain.FitnessTracker)}">
+                    <a href="#"><img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRXxdbbzxuY5eeRUC4p8-h84u3akqCLiUEPmvbnHyTrSSz77AKLL2nLonJsgUwKcgpc15AoLpT4Dp08pBSiMw0bjGQbn0rh0XuAW6_2kEc&usqp=CAc"></a>
+                    <li class="list-group-item">Model: [[ ${product.getModel()} ]]</li>
+                    <li class="list-group-item">Color: [[ ${product.getColor()} ]]</li>
+                    <li class="list-group-item">Price: [[ ${product.getPrice()} ]]</li>
+                </ul>
+                <ul class="list-group list-group-flush" data-th-if="${product instanceOf T(ru.itpark.ulmart.domain.HardDrive)}">
+                    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRfyv-PoMLl10BywAjPkHOjvQoDrv0XX7bHFXvKTuKw8Dl6gJc3tkG71MkJE-PeD8_R7vQdQg6OFPtoqthZhx-HKq3i0ORGPELNYBRDRYpBX1sJAi0m_-5TzA&usqp=CAc"></a>
+                    <li class="list-group-item">Model: [[ ${product.getModel()} ]]</li>
+                    <li class="list-group-item">Volume: [[ ${product.getVolume()} ]]</li>
+                    <li class="list-group-item">Volume: [[ ${product.getAssignment()} ]]</li>
+                    <li class="list-group-item">Price: [[ ${product.getPrice()} ]]</li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
